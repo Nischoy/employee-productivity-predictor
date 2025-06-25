@@ -1,1 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predict - Employee Predictor</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial;
+        }
+        .nav {
+            background-color: #444;
+            padding: 10px 20px;
+        }
+        .nav a {
+            color: white;
+            margin-right: 15px;
+            text-decoration: none;
+        }
+        .form-box {
+            background-color: white;
+            padding: 20px;
+            width: 600px;
+            margin: 40px auto;
+            border: 1px solid #ccc;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, select {
+            width: 100%;
+            padding: 6px;
+            margin-top: 4px;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px;
+            width: 100%;
+            background-color: #444;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
 
+<div class="nav">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+</div>
+
+<div class="form-box">
+    <h2>Enter Employee Details</h2>
+    <form action="/submit" method="POST">
+
+        <label>Quarter</label>
+        <select name="quarter">
+            <option value="0">Quarter 1</option>
+            <option value="1">Q2</option>
+            <option value="2">Q3</option>
+            <option value="3">Q4</option>
+            <option value="4">Q5</option>
+        </select>
+
+        <label>Department</label>
+        <select name="department">
+            <option value="1">Sewing</option>
+            <option value="0">Finishing</option>
+
+        </select>
+
+        <label>Day</label>
+        <select name="day">
+            <option value="0">Monday</option>
+            <option value="1">Saturday</option>
+            <option value="2">Sunday</option>
+            <option value="3">Thursday</option>
+            <option value="4">Tuesday</option>
+            <option value="5">Wednesday</option>
+        </select>
+
+        <label>Team</label>
+        <select name="team">
+            {% for i in range(1, 13) %}
+                <option value="{{ i }}">Team {{ i }}</option>
+            {% endfor %}
+        </select>
+
+        <label>Targeted Productivity</label>
+        <input type="number" step="0.01" name="targeted_productivity" required>
+
+        <label>SMV</label>
+        <input type="number" step="0.01" name="smv" required>
+
+        <label>Over Time</label>
+        <input type="number" name="over_time" required>
+
+        <label>Incentive</label>
+        <input type="number" name="incentive" required>
+
+        <label>Idle Time</label>
+        <input type="number" step="0.01" name="idle_time" required>
+
+        <label>Idle Men</label>
+        <input type="number" name="idle_men" required>
+
+        <label>Number of Workers</label>
+        <input type="number" step="0.01" name="no_of_workers" required>
+
+        <label>Number of Style Changes</label>
+        <input type="number" name="no_of_style_change" required>
+
+        <label>Month</label>
+        <select name="month" required>
+            <option value="1">January</option>
+            <option value="2">February</option>
+            <option value="3">March</option>
+            <option value="4">April</option>
+            <option value="5">May</option>
+            <option value="6">June</option>
+            <option value="7">July</option>
+            <option value="8">August</option>
+            <option value="9">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>

@@ -1,6 +1,6 @@
-# Garment Worker Productivity Predictor
+# Employee Performance Predictor
 
-Flask web app + XGBoost model that predicts garment-worker productivity.
+Flask web app + XGBoost model that predicts Employee productivity.
 
 ## Folders
 * `app.py` & `templates/` – Flask front-end  

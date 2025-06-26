@@ -9,8 +9,8 @@ Flask web app + XGBoost model that predicts Employee productivity.
   * `templates/` – HTML pages (`home.html`, `about.html`, `predict.html`, `submit.html`)  
   * `XGBoost.pkl` – trained prediction model  
 
-* `model_training/` – Data Training and Building Folder  
-  * `model_training.py` – data cleaning and model-training-building code  
+* `model_training/` – Model Training and Building Folder  
+  * `model_training.py` – dataset cleaning and model-training-building code  
 
 * `dataset/`  
   * `garments_worker_productivity.csv` – raw dataset used to train the model  
